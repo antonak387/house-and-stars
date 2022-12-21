@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>890</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>12</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="my_widget" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>90</y>
+      <width>1200</width>
+      <height>800</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_draw">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>20</y>
+      <width>201</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Рисовать</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_clear">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>20</y>
+      <width>201</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Очитска</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_num">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>221</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Количество звезд:</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spinBox_num">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>20</y>
+      <width>201</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>2000000</number>
+    </property>
+    <property name="value">
+     <number>200000</number>
+    </property>
+   </widget>
+   <widget class="my_widget" name="widget_2" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>90</y>
+      <width>1200</width>
+      <height>800</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>my_widget</class>
+   <extends>QWidget</extends>
+   <header location="global">my_widget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
