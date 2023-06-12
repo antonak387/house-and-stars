@@ -1,4 +1,4 @@
-name: C/C++ CI
+name: Qt CI
 
 on:
   push:
@@ -10,14 +10,26 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
+    
     steps:
     - uses: actions/checkout@v3
-    - name: configure
-      run: ./configure
-    - name: make
+    
+    - name: Set up Qt
+      uses: jurplel/install-qt-action@v2
+      with:
+        version: '5.15.2'
+    
+    - name: Install dependencies
+      run: sudo apt-get update && sudo apt-get install -y qt5-default
+    
+    - name: Configure
+      run: qmake
+    
+    - name: Build
       run: make
-    - name: make check
+    
+    - name: Run tests
       run: make check
-    - name: make distcheck
+    
+    - name: Package
       run: make distcheck
